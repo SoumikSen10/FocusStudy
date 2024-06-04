@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "FocusStudy",
+    "description":"Prevents you from opening social media websites when enabled",
+    "version": "0.0.1",
+    "permissions": [
+        "activeTab",
+        "tabs"
+    ],
+    "icons":{
+        "128": "/Images/icon.png"
+    },
+    "page_action":{
+        "default_icon":{
+            "128": "/Images/icon.png"
+        }
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://*.youtube.com/*","*://*.facebook.com/*","*://*.instagram.com/*","*://*.linkedin.com/*","*://*.netflix.com/*"],
+            "js": ["content.js"]
+        }
+    ]
+}
